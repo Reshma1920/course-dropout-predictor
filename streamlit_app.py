@@ -19,7 +19,7 @@ uploaded_file = st.file_uploader("Upload a CSV file", type="csv")
 
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
-    df['time'] = pd.to_datetime(df['time'])
+
 
     # --- Aggregate User-Level Data ---
     agg_df = df.groupby('enroll_id').agg(
