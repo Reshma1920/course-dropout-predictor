@@ -30,7 +30,10 @@ if uploaded_file is not None:
         last_activity=('time', 'max')
     ).reset_index()
 
+    agg_df['first_activity'] = pd.to_datetime(agg_df['first_activity'])
+    agg_df['last_activity'] = pd.to_datetime(agg_df['last_activity'])
     agg_df['activity_span_days'] = (agg_df['last_activity'] - agg_df['first_activity']).dt.days
+
     agg_df['dropout'] = df.groupby('enroll_id')['truth'].first().values
     agg_df.drop(columns=['first_activity', 'last_activity'], inplace=True)
 
