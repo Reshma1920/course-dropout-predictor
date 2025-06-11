@@ -1,0 +1,11 @@
+enroll_id,total_actions,unique_actions,session_count,activity_span_days,dropout
+user_1,15,5,2,1,1
+user_2,90,15,8,9,0
+user_3,30,8,3,3,0
+user_4,5,2,1,0,1
+user_5,50,10,5,6,0
+user_6,22,6,3,2,1
+user_7,60,12,6,7,0
+user_8,8,3,2,1,1
+user_9,70,14,7,8,0
+user_10,45,9,4,5,0
